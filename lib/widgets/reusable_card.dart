@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:music/utilities/constants.dart';
 
 class ReusableCard extends StatelessWidget {
   const ReusableCard({
@@ -22,7 +23,7 @@ class ReusableCard extends StatelessWidget {
             kBackgroundColor,
           ),
           foregroundColor: MaterialStateProperty.all(
-            const Color(0xFFFFFFFF),
+            kForeGroundColorButton,
           ),
         ),
         onPressed: () {
