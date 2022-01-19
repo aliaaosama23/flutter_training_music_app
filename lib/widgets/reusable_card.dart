@@ -17,21 +17,14 @@ class ReusableCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: TextButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            kBackgroundColor,
-          ),
-          foregroundColor: MaterialStateProperty.all(
-            kForeGroundColorButton,
-          ),
-        ),
+      child: RawMaterialButton(
+        fillColor: kBackgroundColor,
         onPressed: () {
           playSound(cardNumber);
         },
         child: Text(
           cardTitle,
-          style: const TextStyle(fontSize: 20),
+          style: kCardTextStyle,
         ),
       ),
     );
